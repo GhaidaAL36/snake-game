@@ -80,3 +80,23 @@ document.addEventListener("keydown",function(e){
       velocityX = 1;
   }
 })
+
+document.addEventListener("keydown", function(e) {
+    console.log(e.key);
+    let key = e.key;
+    
+    // 
+    if((key == "ArrowUp" || key == "w") && velocityY != 1) {
+        velocityX = 0;
+        velocityY = -1;
+    } else if((key == "ArrowDown" || key == "s") && velocityY != -1) {
+        velocityX = 0;
+        velocityY = 1;
+    } else if((key == "ArrowLeft" || key == "a") && velocityX != 1) {
+        velocityY = 0;
+        velocityX = -1;
+    } else if((key == "ArrowRight" || key == "d") && velocityX != -1) {
+        velocityY = 0;
+        velocityX = 1;
+    }
+});
